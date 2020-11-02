@@ -1,0 +1,364 @@
+////
+//// Typography
+////
+
+// $body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
+//$mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace;
+//$root-font-size: 16px;         // Base font-size for rems
+//$body-line-height: 1.4;
+//$content-line-height: 1.5;
+//$body-heading-line-height: 1.15;
+
+// colour palette
+$orangeutan: #FF784F;
+$greygoose: #494949;
+$clear-white: rgba(255,255,255,0.5);
+$grey-dk-000: black;
+$grey-dk-100: $orangeutan; // bold pink
+$grey-lt-000: $greygoose;
+$search-background-color: $orangeutan !important;
+$body-text-color: white;
+$nav-child-link-color: $grey-dk-100;
+$link-color: $grey-dk-100;
+$link-color: $grey-dk-300;
+$border: 0px solid;
+$rdark :#660033;
+$rlite: #FF0000;
+$nav-list-item-height-sm:10px;
+
+
+body {
+  background-color: $orangeutan !important;
+  color: white !important;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@font-face {
+  font-family: 'manrope';
+  src: url('/assets/fonts/Manrope-Regular.woff2') format('woff2'),
+       url('/assets/fonts/Manrope-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  background-color: $orangeutan;
+}
+
+h1, h2, h3, h4, h5, h6, .site-header {
+  font-family: 'manrope',-apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
+  // letter-spacing: 0.2em;
+  color: white !important;
+  text-align: left;
+}
+
+
+li.breadcrumb-nav-list-item a, .page-content a, .breadcrumb-nav-list-item::after {
+  color: white !important;
+}
+
+
+
+.page-content .anchor-heading svg {
+  fill: white;
+}
+
+h1:after {
+    position: absolute;
+    height: 6px;
+    margin: 0 auto;
+    content: '';
+    left: 0;
+    right: 0;
+    background-color: $grey-dk-100;
+    left: 0;
+    bottom: -0.5em;
+    // content: "";
+    // display: block;
+    // height: 30px;
+    // background-image: url('/assets/hr3.svg');
+    // background-repeat: repeat-x;
+    // background-position: center bottom;
+}
+
+h1 {
+  text-align: left;
+}
+h1.home:after {
+  height:0px;
+}
+
+
+.side-bar {
+  background: $greygoose !important;
+}
+.site-footer {
+  color: white;
+}
+
+footer .site-footer p {
+  color: white;
+}
+
+.page-header, .page-header.nav-open {
+  background-color: $orangeutan !important;
+}
+
+.main-content a:hover {
+  color: $orangeutan !important;
+  background: white !important;
+  // padding: 3px 0px 3px 0px;
+}
+
+a.button {
+  background: white !important;
+  color: $orangeutan !important;
+  padding: 10px !important;
+  background: white;
+  color: $orangeutan !important;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+a.button:hover {
+  background: $greygoose !important;
+  color: white !important;
+  transition: transform 0.2s;
+}
+
+.navigation-list-child-list .navigation-list-link {
+  color: white !important;
+}
+
+.site-header a {
+  color: white !important;
+  background-color: $greygoose !important;
+}
+
+.caption {
+  font-size: 0.8em;
+  text-align: left;
+}
+
+hr {
+  display: inline-block;
+  // margin: none !important;
+  height: 2em !important;
+  width: 2em !important;
+  // padding: 100px;
+  background-color: $body-background-color !important;
+  background-image: url("/assets/hr2.svg");
+  background-size: cover;
+  padding: 0;
+  border: 0;
+  align: left !important;
+  animation: rotation 4s infinite linear;
+  background-color: transparent !important;
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+a:not([class]) {
+    text-decoration: none;
+    background-image: linear-gradient($clear-white 0%, $clear-white 100%) !important;
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-size: 1px 2px;
+  }
+
+.main-content a:hover {
+  color: $orangeutan !important;
+  background-color: white;
+}
+
+::selection,::-moz-selection  {
+  background-color: $greygoose !important;
+  color:white;
+}
+
+.page-content ol > li::before, .page-content ul > li::before {
+  color: $clear-white !important;
+}
+
+h2 {
+  padding: 2em 0 1em 0;
+}
+
+h3 {
+  font-size: 2em;
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+}
+
+h3:after {
+    position: absolute;
+    height: 3px;
+    margin: 0 auto;
+    content: '';
+    left: 0;
+    right: 0;
+    color: #000;
+    background-color: $grey-dk-100;
+    left: 0;
+    bottom: -0.5em; /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+}
+
+@media print {
+  hr {
+    display: none;
+  }
+}
+
+
+footer {
+  color: white;
+}
+
+footer p {
+  color:white !important;
+}
+
+footer p a:hover {
+  color: $orangeutan;
+}
+
+p.text-small.text-grey-dk-000.mb-0,
+p.text-small.text-grey-dk-000.mb-0 a {
+  color: white !important;
+}
+
+p.text-small.text-grey-dk-000.mb-0 a:hover {
+  color: white !important;
+}
+
+.search-icon {
+  fill: $greygoose !important;
+}
+.search-results-wrap::placeholder {
+}
+
+input.js-search-input.search-input::placeholder {
+  color: pink;
+}
+
+
+span {
+  border-right: .05em solid #FF784F;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+// image masks - from https://cssduotone.com/
+
+
+// image filters
+:root {
+  --base:              #ff784f;
+  --bg-blend:          screen;
+  --blur:              0px;
+  --fg-blend:          darken;
+  --foreground:        #ffffff;
+  --opacity:           1;
+  --spacing:           0px;
+}
+.img-wrapper {
+  background-color:    var(--base);
+  display:             flex;
+  flex:                1 1 100%;
+  height:              100%;
+  overflow:            hidden;
+  padding:             var(--spacing);
+  position:            relative;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+.img-wrapper img {
+    filter:              grayscale(100%) contrast(1) blur(var(--blur));
+    flex:                1 0 100%;
+    height:              100%;
+    max-width:           100%;
+    mix-blend-mode:      var(--bg-blend);
+    object-fit:          cover;
+    opacity:             var(--opacity);
+    position:            relative;
+    width:               100%;
+  }
+.img-wrapper::before {
+    background-color:    var(--foreground);
+    bottom:              0;
+    content:             '';
+    height:              100%;
+    left:                0;
+    mix-blend-mode:      var(--fg-blend);
+    position:            absolute;
+    right:               0;
+    top:                 0;
+    width:               100%;
+    z-index:             1;
+  }
+
+.img-wrapper:hover {
+  background: none;
+}
+.img-wrapper:hover img {
+  filter: none;
+}
+
+iframe {
+  border: none;
+}
+
+// tables
+
+table, td, td, .table-wrapper {
+    border: none !important;
+    border-radius: 0px !important;
+    background: rgba(255,255,255,0) !important;
+    box-shadow: none !important;
+}
+
+th {
+    background: #494949 !important;
+}
+
+tr:nth-child(odd) {
+    background: rgba(255,255,255,0.1) !important;
+}
+
+tr:nth-child(even) {
+    background: rgba(255,255,255,0.2) !important;
+}
+
+tr.emphasis {
+    background: white !important;
+    color: #ff784f !important;
+}
